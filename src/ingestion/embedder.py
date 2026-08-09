@@ -13,10 +13,11 @@ import os
 # This is what makes BGE significantly better than generic embedders
 BGE_INSTRUCTION = "Represent this sentence for searching relevant passages: "
 
+
 class TextEmbedder:
     """
     Embeds text chunks using BGE-large-en-v1.5 and stores in ChromaDB.
-    
+
     BGE (Beijing Academy of AI) consistently outperforms OpenAI ada-002
     on retrieval benchmarks (MTEB) and runs fully locally — no API cost.
     """
@@ -48,7 +49,7 @@ class TextEmbedder:
     def embed_texts(self, texts, batch_size=32, add_instruction=True):
         """
         Embed a list of texts in batches.
-        
+
         add_instruction: True for children (retrieval queries)
                         False for parents (not embedded through BGE)
         """
@@ -57,7 +58,7 @@ class TextEmbedder:
 
         all_embeddings = []
 
-        for i in tqdm(range(0, len(texts), batch_size), 
+        for i in tqdm(range(0, len(texts), batch_size),
                       desc="Embedding batches"):
             batch = texts[i:i + batch_size]
             with torch.no_grad():
@@ -89,10 +90,11 @@ class TextEmbedder:
                 "doc_name": c["doc_name"],
                 "page_num": c["page_num"],
                 "token_count": c["token_count"],
-                "chunk_type": "child"
+                "chunk_type": "child",
+                "image_ids": c.get("image_ids", "")  # comma-joined string, "" if none
             } for c in batch]
 
-            embeddings = self.embed_texts(texts, 
+            embeddings = self.embed_texts(texts,
                                           batch_size=batch_size,
                                           add_instruction=True)
 
@@ -110,7 +112,7 @@ class TextEmbedder:
         Store parent chunks in ChromaDB WITHOUT embedding.
         Parents are fetched by ID after child retrieval —
         they don't need embeddings, just storage.
-        
+
         We store them in ChromaDB for consistency but could
         also use SQLite here.
         """
@@ -133,7 +135,8 @@ class TextEmbedder:
                     "doc_name": p["doc_name"],
                     "page_num": p["page_num"],
                     "token_count": p["token_count"],
-                    "chunk_type": "parent"
+                    "chunk_type": "parent",
+                    "image_ids": p.get("image_ids", "")  # comma-joined string, "" if none
                 } for p in batch]
             )
 
@@ -201,7 +204,7 @@ if __name__ == "__main__":
     )):
         similarity = 1 - dist
         print(f"Result {i+1} | Score: {similarity:.4f} | "
-              f"Page: {meta['page_num']}")
+              f"Page: {meta['page_num']} | image_ids: '{meta.get('image_ids', '')}'")
         print(f"  {doc[:200]}\n")
 
     # Fetch parent for top result

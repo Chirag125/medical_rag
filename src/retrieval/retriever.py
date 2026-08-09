@@ -11,12 +11,13 @@ from sentence_transformers import SentenceTransformer, CrossEncoder
 from src.ingestion.embedder import TextEmbedder, BGE_INSTRUCTION
 import numpy as np
 
+
 class Retriever:
     """
     Two-stage retrieval pipeline:
     Stage 1 — BGE dual encoder: fast approximate retrieval (top-20)
     Stage 2 — Cross encoder reranker: precise reranking (top-5)
-    
+
     Why two stages:
     - Dual encoder is fast but imprecise (encodes query + doc separately)
     - Cross encoder is slow but precise (reads query + doc together)
@@ -89,7 +90,7 @@ class Retriever:
     def rerank(self, query, candidates):
         """
         Stage 2: cross-encoder reranking.
-        
+
         Cross encoder reads [query, document] together —
         much more accurate than independent embeddings.
         Slower, so only run on top-20 candidates from stage 1.
@@ -145,7 +146,7 @@ class Retriever:
         Full retrieval pipeline:
         query → BGE top-20 → cross-encoder rerank → top-5 parents
 
-        Returns list of dicts with text, scores, and metadata.
+        Returns list of dicts with text, scores, metadata, and image_ids.
         """
         # Stage 1: candidate retrieval
         candidates = self.retrieve_candidates(query)
@@ -171,7 +172,11 @@ class Retriever:
                 "bi_encoder_score": candidate["bi_encoder_score"],
                 "cross_encoder_score": candidate["cross_encoder_score"],
                 "doc_name": candidate["metadata"]["doc_name"],
-                "page_num": candidate["metadata"]["page_num"]
+                "page_num": candidate["metadata"]["page_num"],
+                # NEW: comma-joined image_ids for this chunk's page, "" if none.
+                # Lets the generator (or a future image-answer path) know which
+                # images are available for this result without re-querying.
+                "image_ids": candidate["metadata"].get("image_ids", "")
             })
 
         return results
@@ -193,7 +198,7 @@ if __name__ == "__main__":
         print(f"Result {i+1}")
         print(f"  BGE score:          {r['bi_encoder_score']:.4f}")
         print(f"  Cross-encoder score: {r['cross_encoder_score']:.4f}")
-        print(f"  Page: {r['page_num']} | Doc: {r['doc_name']}")
+        print(f"  Page: {r['page_num']} | Doc: {r['doc_name']} | Images: '{r['image_ids']}'")
         print(f"  Child: {r['child_text'][:120]}...")
         print(f"  Parent: {r['parent_text'][:200]}...")
         print()
