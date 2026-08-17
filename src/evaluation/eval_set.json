@@ -1,134 +1,92 @@
 [
   {
     "qid": "0001",
-    "question": "How did GPT-4 perform on a simulated bar exam compared to human test takers?",
-    "doc_name": "test_paper",
-    "page_num": 1
+    "question": "What score did GPT-4 achieve on a simulated bar exam relative to human test takers?",
+    "doc_name": "test_paper"
   },
   {
     "qid": "0002",
-    "question": "How many languages did GPT-4 outperform the English-language state-of-the-art on for translated MMLU?",
-    "doc_name": "test_paper",
-    "page_num": 2
+    "question": "What technique does OpenAI use to give the GPT-4 policy model an additional reward signal for correct refusal behavior?",
+    "doc_name": "test_paper"
   },
   {
     "qid": "0003",
-    "question": "What method did OpenAI use to predict GPT-4's final training loss before the run completed?",
-    "doc_name": "test_paper",
-    "page_num": 3
+    "question": "What did external cybersecurity red teamers find about GPT-4's ability to build exploits for vulnerabilities it identified?",
+    "doc_name": "test_paper"
   },
   {
     "qid": "0004",
-    "question": "How were exam questions sourced for evaluating GPT-4's capabilities?",
-    "doc_name": "test_paper",
-    "page_num": 4
+    "question": "How much did GPT-4 reduce toxic generations compared to GPT-3.5 on the RealToxicityPrompts dataset?",
+    "doc_name": "test_paper"
   },
   {
     "qid": "0005",
-    "question": "How are the exam results in Figure 4 ordered and what do they show about GPT-4 versus GPT-3.5?",
-    "doc_name": "test_paper",
-    "page_num": 6
+    "question": "What was the Alignment Research Center's overall conclusion about GPT-4's ability to autonomously replicate and acquire resources?",
+    "doc_name": "test_paper"
   },
   {
     "qid": "0006",
-    "question": "How does GPT-4 compare to prior state-of-the-art language models on the MMLU and HellaSwag benchmarks?",
-    "doc_name": "test_paper",
-    "page_num": 7
+    "question": "What does CoinRAG extract from retrieved text chunks instead of encoding the full chunk online?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0007",
-    "question": "How was the MMLU benchmark translated into other languages to test GPT-4's multilingual performance?",
-    "doc_name": "test_paper",
-    "page_num": 8
+    "question": "What latency budget does CoinRAG target for Time-to-First-Token under its service-level constraint?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0008",
-    "question": "What example is given to demonstrate GPT-4's ability to process visual input alongside text?",
-    "doc_name": "test_paper",
-    "page_num": 9
+    "question": "What two-stage process does CoinRAG use to select which nuggets to use at query time?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0009",
-    "question": "What does it mean for GPT-4 to hallucinate, and how much does GPT-4 reduce hallucinations compared to GPT-3.5?",
-    "doc_name": "test_paper",
-    "page_num": 10
+    "question": "Why does CoinRAG need a position rotation/alignment step when assembling cached nugget representations?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0010",
-    "question": "What happens to GPT-4's calibration after RLHF post-training compared to the pre-trained model?",
-    "doc_name": "test_paper",
-    "page_num": 11
+    "question": "Which base language model and dense embedding model were used in CoinRAG's experiments?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0011",
-    "question": "What domains of expertise were represented among the external experts who adversarially tested GPT-4?",
-    "doc_name": "test_paper",
-    "page_num": 12
+    "question": "What benchmarks did CoinRAG get evaluated on, and what do they test?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0012",
-    "question": "How did GPT-4's response change between the early and launch versions when asked about synthesizing a dangerous chemical at home?",
-    "doc_name": "test_paper",
-    "page_num": 13
+    "question": "According to the ablation studies, what happens to CoinRAG's peak F1-score when nuggets are encoded in isolation instead of contextually?",
+    "doc_name": "2608.07458v1"
   },
   {
     "qid": "0013",
-    "question": "How much did GPT-4-launch reduce incorrect behavior on disallowed prompts compared to earlier models?",
-    "doc_name": "test_paper",
-    "page_num": 14
+    "question": "How many capability levels does the Economic World Models paper's ladder for EWM systems have?",
+    "doc_name": "2608.06020v1"
   },
   {
     "qid": "0014",
-    "question": "What two model versions does the GPT-4 System Card focus on comparing?",
-    "doc_name": "test_paper",
-    "page_num": 42
+    "question": "What are the four engineering desiderata the paper lists for a strong EWM system?",
+    "doc_name": "2608.06020v1"
   },
   {
     "qid": "0015",
-    "question": "What list of specific risk areas did OpenAI explore when evaluating GPT-4?",
-    "doc_name": "test_paper",
-    "page_num": 44
+    "question": "What example economic scenario is used to illustrate the EWM execution interface?",
+    "doc_name": "2608.06020v1"
   },
   {
     "qid": "0016",
-    "question": "Why can hallucinations become more dangerous as a language model becomes more generally truthful?",
-    "doc_name": "test_paper",
-    "page_num": 46
+    "question": "How many validated EWM papers resulted from the paper's literature classification pipeline, and how many candidate papers did it start from?",
+    "doc_name": "2608.06020v1"
   },
   {
     "qid": "0017",
-    "question": "What kinds of harmful content could intentional probing of GPT-4-early produce?",
-    "doc_name": "test_paper",
-    "page_num": 47
+    "question": "What is the key difference the paper draws between physical world models and economic world models?",
+    "doc_name": "2608.06020v1"
   },
   {
     "qid": "0018",
-    "question": "What role does access to GPT-4 play in helping proliferators of nuclear, radiological, biological, or chemical weapons?",
-    "doc_name": "test_paper",
-    "page_num": 52
-  },
-  {
-    "qid": "0019",
-    "question": "What did external cybersecurity experts find when testing GPT-4's ability to aid vulnerability discovery and exploitation?",
-    "doc_name": "test_paper",
-    "page_num": 53
-  },
-  {
-    "qid": "0020",
-    "question": "What task did the Alignment Research Center use a TaskRabbit worker for while testing GPT-4's power-seeking behavior?",
-    "doc_name": "test_paper",
-    "page_num": 55
-  },
-  {
-    "qid": "0021",
-    "question": "What kind of workforce impact does the System Card say GPT-4 could have over time?",
-    "doc_name": "test_paper",
-    "page_num": 58
-  },
-  {
-    "qid": "0022",
-    "question": "What two stages of training does OpenAI describe for shaping GPT-4-launch's behavior after pre-training?",
-    "doc_name": "test_paper",
-    "page_num": 62
+    "question": "What three functional roles does the paper describe for applications of Economic World Models?",
+    "doc_name": "2608.06020v1"
   }
 ]

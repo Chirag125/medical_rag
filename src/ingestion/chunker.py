@@ -167,6 +167,58 @@ Questions:"""
         return []
 
 
+# Append this function to src/ingestion/chunker.py (it uses the same
+# TOKENIZER, count_tokens, and RecursiveCharacterTextSplitter already
+# imported at the top of that file).
+
+def split_naive(pages, chunk_size=256, overlap=32):
+    """
+    Naive baseline chunking — the "before" state for the ablation table.
+
+    No context header prepended, no parent-child split. Every chunk is
+    flat and self-contained, same as most tutorial RAG implementations
+    start with. This is what recall@5 looks like *before* your context
+    headers and parent-child improvements.
+
+    To keep embedder.py's store_children()/store_parents() working
+    unchanged, each naive chunk sets its own id as its parent_id (so
+    fetch_parents() just fetches the same chunk back — parent == child
+    for this strategy). image_ids is carried over from the page, same
+    as the real pipeline, so image plumbing stays testable too.
+    """
+    chunks = []
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size * 2,
+        chunk_overlap=overlap * 2,
+        separators=["\n\n", "\n", ". ", " ", ""]
+    )
+
+    for page in pages:
+        text = page["text"].strip()
+        if not text or len(text) < 50:
+            continue
+
+        page_image_ids = ",".join(page.get("image_ids", []))
+        pieces = splitter.split_text(text)
+
+        for piece in pieces:
+            chunk_id = str(uuid.uuid4())
+            chunks.append({
+                "id": chunk_id,
+                "parent_id": chunk_id,  # self-referential: naive has no real parent
+                "text": piece,           # no context header — the whole point of "naive"
+                "raw_text": piece,
+                "doc_name": page["doc_name"],
+                "page_num": page["page_num"],
+                "token_count": count_tokens(piece),
+                "image_ids": page_image_ids
+            })
+
+    print(f"Created {len(chunks)} naive chunks (no header, no parent-child)")
+    # Return both parents and children as the SAME list, since embedder.py
+    # expects (parents, children) — for naive, parent == child == this list.
+    return chunks, chunks
+
 # Test
 if __name__ == "__main__":
     import sys

@@ -1,0 +1,23 @@
+[
+  {"qid": "sr001", "question": "What problem does Self-RAG identify with standard RAG's approach of always retrieving a fixed number of passages?", 
+  "doc_name": "2310.11511v1", 
+  "page_num": 1},
+  {"qid": "sr002", "question": "How does Self-RAG's approach differ from prior work that retrieves only once at the beginning of generation?", 
+  "doc_name": "2310.11511v1", 
+  "page_num": 1},
+  {"qid": "sr003", "question": "What are the four types of reflection tokens defined in Self-RAG, and what does each one decide or evaluate?",
+   "doc_name": "2310.11511v1", "page_num": 3},
+  {"qid": "sr004", "question": "According to the inference algorithm, what does the model predict after retrieving passages when Retrieve is Yes?",
+   "doc_name": "2310.11511v1", "page_num": 4},
+  {"qid": "sr005", "question": "How is the critic model's training data collected, and which proprietary model is used to generate reflection token labels?", 
+  "doc_name": "2310.11511v1", "page_num": 5},
+  {"qid": "sr006", "question": "In the generator training data collection process, what happens if the critic predicts a passage is relevant but not supportive of the generation?",
+   "doc_name": "2310.11511v1", "page_num": 5},
+  {"qid": "sr007", "question": "What is adaptive retrieval with a threshold, and how does Self-RAG decide whether the probability of the Retrieve token triggers retrieval?",
+   "doc_name": "2310.11511v1", "page_num": 6},
+  {"qid": "sr008", "question": "What datasets and tasks are used to evaluate Self-RAG, including the closed-set and short-form generation tasks?", 
+  "doc_name": "2310.11511v1", "page_num": 7},
+  {"qid": "sr009", "question": "How does Self-RAG's performance compare to ChatGPT and retrieval-augmented Llama2-chat across the six evaluation tasks?",
+   "doc_name": "2310.11511v1", "page_num": 8},
+  {"qid": "sr010", "question": "What do the ablation studies show about removing the critic model or the retriever during training?", "doc_name": "2310.11511v1", "page_num": 10}
+]

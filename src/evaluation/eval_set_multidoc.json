@@ -1,0 +1,122 @@
+[
+  {
+    "qid": "0001",
+    "question": "What score did GPT-4 achieve on a simulated bar exam relative to human test takers?",
+    "doc_name": "test_paper"
+  },
+  {
+    "qid": "0002",
+    "question": "What technique does OpenAI use to give the GPT-4 policy model an additional reward signal for correct refusal behavior?",
+    "doc_name": "test_paper"
+  },
+  {
+    "qid": "0003",
+    "question": "What did external cybersecurity red teamers find about GPT-4's ability to build exploits for vulnerabilities it identified?",
+    "doc_name": "test_paper"
+  },
+  {
+    "qid": "0004",
+    "question": "How much did GPT-4 reduce toxic generations compared to GPT-3.5 on the RealToxicityPrompts dataset?",
+    "doc_name": "test_paper"
+  },
+  {
+    "qid": "0005",
+    "question": "What was the Alignment Research Center's overall conclusion about GPT-4's ability to autonomously replicate and acquire resources?",
+    "doc_name": "test_paper"
+  },
+  {
+    "qid": "0006",
+    "question": "What does CoinRAG extract from retrieved text chunks instead of encoding the full chunk online?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0007",
+    "question": "What latency budget does CoinRAG target for Time-to-First-Token under its service-level constraint?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0008",
+    "question": "What two-stage process does CoinRAG use to select which nuggets to use at query time?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0009",
+    "question": "Why does CoinRAG need a position rotation/alignment step when assembling cached nugget representations?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0010",
+    "question": "Which base language model and dense embedding model were used in CoinRAG's experiments?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0011",
+    "question": "What benchmarks did CoinRAG get evaluated on, and what do they test?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0012",
+    "question": "According to the ablation studies, what happens to CoinRAG's peak F1-score when nuggets are encoded in isolation instead of contextually?",
+    "doc_name": "2608.07458v1"
+  },
+  {
+    "qid": "0013",
+    "question": "How many capability levels does the Economic World Models paper's ladder for EWM systems have?",
+    "doc_name": "2608.06020v1"
+  },
+  {
+    "qid": "0014",
+    "question": "What are the four engineering desiderata the paper lists for a strong EWM system?",
+    "doc_name": "2608.06020v1"
+  },
+  {
+    "qid": "0015",
+    "question": "What example economic scenario is used to illustrate the EWM execution interface?",
+    "doc_name": "2608.06020v1"
+  },
+  {
+    "qid": "0016",
+    "question": "How many validated EWM papers resulted from the paper's literature classification pipeline, and how many candidate papers did it start from?",
+    "doc_name": "2608.06020v1"
+  },
+  {
+    "qid": "0017",
+    "question": "What is the key difference the paper draws between physical world models and economic world models?",
+    "doc_name": "2608.06020v1"
+  },
+  {
+    "qid": "0018",
+    "question": "What three functional roles does the paper describe for applications of Economic World Models?",
+    "doc_name": "2608.06020v1"
+  },
+  {
+    "qid": "0019",
+    "question": "What problem with standard RAG does Self-RAG try to solve by retrieving passages adaptively instead of retrieving a fixed number every time?",
+    "doc_name": "2310.11511v1"
+  },
+  {
+    "qid": "0020",
+    "question": "What are reflection tokens in Self-RAG, and what role do they play during generation?",
+    "doc_name": "2310.11511v1"
+  },
+  {
+    "qid": "0021",
+    "question": "How does Self-RAG decide whether retrieval is necessary for a given input, rather than always retrieving?",
+    "doc_name": "2310.11511v1"
+  },
+  {
+    "qid": "0022",
+    "question": "What kinds of tasks was Self-RAG evaluated on, such as open-domain QA, reasoning, or long-form generation?",
+    "doc_name": "2310.11511v1"
+  },
+  {
+    "qid": "0023",
+    "question": "How does Self-RAG allow its retrieval behavior to be adjusted at inference time without retraining the model?",
+    "doc_name": "2310.11511v1"
+  },
+  {
+    "qid": "0024",
+    "question": "What did Self-RAG show in terms of factuality and citation accuracy compared to models like ChatGPT for long-form generation?",
+    "doc_name": "2310.11511v1"
+  }
+]

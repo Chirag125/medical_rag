@@ -1,117 +1,57 @@
 {
-  "recall_at_k": 0.8181818181818182,
+  "recall_at_k": 0.7,
   "k": 5,
-  "rerank": false,
+  "rerank": true,
   "relevance_key": "page_num",
   "per_query": [
     {
-      "qid": "0001",
-      "question": "How did GPT-4 perform on a simulated bar exam compared to human test takers?",
+      "qid": "sr001",
+      "question": "What problem does Self-RAG identify with standard RAG's approach of always retrieving a fixed number of passages?",
       "hit": true
     },
     {
-      "qid": "0002",
-      "question": "How many languages did GPT-4 outperform the English-language state-of-the-art on for translated MMLU?",
+      "qid": "sr002",
+      "question": "How does Self-RAG's approach differ from prior work that retrieves only once at the beginning of generation?",
+      "hit": true
+    },
+    {
+      "qid": "sr003",
+      "question": "What are the four types of reflection tokens defined in Self-RAG, and what does each one decide or evaluate?",
+      "hit": true
+    },
+    {
+      "qid": "sr004",
+      "question": "According to the inference algorithm, what does the model predict after retrieving passages when Retrieve is Yes?",
       "hit": false
     },
     {
-      "qid": "0003",
-      "question": "What method did OpenAI use to predict GPT-4's final training loss before the run completed?",
+      "qid": "sr005",
+      "question": "How is the critic model's training data collected, and which proprietary model is used to generate reflection token labels?",
       "hit": true
     },
     {
-      "qid": "0004",
-      "question": "How were exam questions sourced for evaluating GPT-4's capabilities?",
+      "qid": "sr006",
+      "question": "In the generator training data collection process, what happens if the critic predicts a passage is relevant but not supportive of the generation?",
       "hit": true
     },
     {
-      "qid": "0005",
-      "question": "How are the exam results in Figure 4 ordered and what do they show about GPT-4 versus GPT-3.5?",
+      "qid": "sr007",
+      "question": "What is adaptive retrieval with a threshold, and how does Self-RAG decide whether the probability of the Retrieve token triggers retrieval?",
       "hit": true
     },
     {
-      "qid": "0006",
-      "question": "How does GPT-4 compare to prior state-of-the-art language models on the MMLU and HellaSwag benchmarks?",
-      "hit": true
-    },
-    {
-      "qid": "0007",
-      "question": "How was the MMLU benchmark translated into other languages to test GPT-4's multilingual performance?",
-      "hit": true
-    },
-    {
-      "qid": "0008",
-      "question": "What example is given to demonstrate GPT-4's ability to process visual input alongside text?",
+      "qid": "sr008",
+      "question": "What datasets and tasks are used to evaluate Self-RAG, including the closed-set and short-form generation tasks?",
       "hit": false
     },
     {
-      "qid": "0009",
-      "question": "What does it mean for GPT-4 to hallucinate, and how much does GPT-4 reduce hallucinations compared to GPT-3.5?",
+      "qid": "sr009",
+      "question": "How does Self-RAG's performance compare to ChatGPT and retrieval-augmented Llama2-chat across the six evaluation tasks?",
       "hit": true
     },
     {
-      "qid": "0010",
-      "question": "What happens to GPT-4's calibration after RLHF post-training compared to the pre-trained model?",
-      "hit": true
-    },
-    {
-      "qid": "0011",
-      "question": "What domains of expertise were represented among the external experts who adversarially tested GPT-4?",
-      "hit": true
-    },
-    {
-      "qid": "0012",
-      "question": "How did GPT-4's response change between the early and launch versions when asked about synthesizing a dangerous chemical at home?",
-      "hit": true
-    },
-    {
-      "qid": "0013",
-      "question": "How much did GPT-4-launch reduce incorrect behavior on disallowed prompts compared to earlier models?",
-      "hit": true
-    },
-    {
-      "qid": "0014",
-      "question": "What two model versions does the GPT-4 System Card focus on comparing?",
-      "hit": true
-    },
-    {
-      "qid": "0015",
-      "question": "What list of specific risk areas did OpenAI explore when evaluating GPT-4?",
-      "hit": false
-    },
-    {
-      "qid": "0016",
-      "question": "Why can hallucinations become more dangerous as a language model becomes more generally truthful?",
-      "hit": true
-    },
-    {
-      "qid": "0017",
-      "question": "What kinds of harmful content could intentional probing of GPT-4-early produce?",
-      "hit": true
-    },
-    {
-      "qid": "0018",
-      "question": "What role does access to GPT-4 play in helping proliferators of nuclear, radiological, biological, or chemical weapons?",
-      "hit": true
-    },
-    {
-      "qid": "0019",
-      "question": "What did external cybersecurity experts find when testing GPT-4's ability to aid vulnerability discovery and exploitation?",
-      "hit": true
-    },
-    {
-      "qid": "0020",
-      "question": "What task did the Alignment Research Center use a TaskRabbit worker for while testing GPT-4's power-seeking behavior?",
-      "hit": true
-    },
-    {
-      "qid": "0021",
-      "question": "What kind of workforce impact does the System Card say GPT-4 could have over time?",
-      "hit": true
-    },
-    {
-      "qid": "0022",
-      "question": "What two stages of training does OpenAI describe for shaping GPT-4-launch's behavior after pre-training?",
+      "qid": "sr010",
+      "question": "What do the ablation studies show about removing the critic model or the retriever during training?",
       "hit": false
     }
   ]
